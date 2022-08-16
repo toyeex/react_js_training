@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title of the document</title>
+</head>
+<body>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+	<div id='root'></div>
+
+	<script type="text/babel">
+	    //------------Membuat UI dengan Javascript---------------
+		//memilih media untuk menampung element
+		//const root = document.querySelector('#root');
+		//console.log(root);
+		
+		//menambahkan element 
+		//const element = document.createElement('h1');
+		//element.textContent = "Hello with Javascript";
+		//element.className = 'heading-1'
+		//console.log(element);
+		
+		//melakukan rendering untuk menampilkan konten
+		//root.appendChild(element);
+		
+		//memilih media untuk menampung element
+		const root = document.querySelector('#root');
+		
+		//menambahkan multiple element
+		//const element = React.createElement('ul',
+			//{className: 'list'},
+			//React.createElement('li',null,'Apel'),
+			//React.createElement('li',null,'Jeruk'),
+			//React.createElement('li',null,'Anggur')
+			//);
+		//const element = (
+			//<ul>
+				//<li>Apel</li>
+				//<li>Jeruk</li>
+				//<li>Anggur</li>
+			//</ul>
+		//);
+		const date = new Date().toLocaleDateString();
+		const element = <h1>Hello {date}</h1>;
+		
+		//melakukan rendering untuk element 
+		ReactDOM.render(element,root);
+	</script>
+</body>
+</html>
