@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title of the document</title>
+</head>
+<body>
+	<div id='root'></div>
+
+	<script>
+		//memilih media untuk menampung konten
+		const root = document.querySelector('#root');
+		console.log(root);
+		
+		//menambahkan elemen pada konten
+		const element = document.createElement('h1');
+		element.textContent = "Hello with Javascript";
+		element.className = 'heading-1'
+		console.log(element);
+		
+		//melakukan rendering untuk menampilkan konten
+		root.appendChild(element);
+		
+	</script>
+</body>
+</html>
