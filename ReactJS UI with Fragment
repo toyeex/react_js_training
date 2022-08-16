@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title of the document</title>
+</head>
+<body>
+	<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+	<div id='root'></div>
+
+	<script>
+	    //------------Membuat UI dengan Javascript---------------
+		//memilih media untuk menampung element
+		//const root = document.querySelector('#root');
+		//console.log(root);
+		
+		//menambahkan element 
+		//const element = document.createElement('h1');
+		//element.textContent = "Hello with Javascript";
+		//element.className = 'heading-1'
+		//console.log(element);
+		
+		//melakukan rendering untuk menampilkan konten
+		//root.appendChild(element);
+		
+		//memilih media untuk menampung element
+		const root = document.querySelector('#root');
+		
+		//menambahkan multiple element
+		const p1 = React.createElement('p', {
+			children: 'Hello Paragraf Pertama'
+		});
+		const p2 = React.createElement('p', {
+			children: 'Hello Paragraf Kedua'
+		});
+		//menggunakan tag div
+		//const element = React.createElement('div', {
+			//children: [p1,p2]
+		//});
+		const element = React.createElement(React.Fragment, {
+			children: [p1,p2]
+		});
+		//melakukan rendering untuk element 
+		ReactDOM.render(element,root);
+	</script>
+</body>
+</html>
